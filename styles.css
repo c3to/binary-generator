@@ -28,6 +28,7 @@ body {
   border-bottom: none;
   font-size: 14px;
   position: relative;
+  text-shadow: 1px 2px 0 #fff;
 }
 
 #menuBurger {
@@ -114,6 +115,7 @@ textarea {
 
 input[type=button] {
   border-bottom: 3px solid #ddd;
+  font-weight: bold;
 }
 
 input[type=button]:active {
@@ -145,6 +147,7 @@ input[type=button].btn-active {
   margin: 0;
   padding: 5px 0;
   background: #ddd;
+  font-weight: bold;
 }
 
 .form-item-group .form-item.focus label {
