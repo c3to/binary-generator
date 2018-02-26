@@ -1,0 +1,96 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <link rel="stylesheet" href="styles.css" class="css">
+
+  <title>ONE</title>
+
+</head>
+<body>
+
+<div id="app">
+
+  <div id="heading">
+    <h1>Random binary generator</h1>
+    <div id="menuBurger" onClick="app.toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="menu">
+    <form id="menu-form">
+      <div class="form-item">
+        <label for="cycle">Cycle in ms </label>
+        <input type="text" id="cycle" value="500">
+      </div>
+      <div class="form-item">
+        <label for="count">Count </label>
+        <input type="text" id="count" value="100">
+      </div>
+    </form>
+  </div>
+
+  <form id="hud">
+
+    <div class="form-item-group">
+      <div class="form-item">
+        <label for="rand">Gen </label>
+        <input type="text" id="rand" value="0" readonly>
+      </div>
+      <div class="form-item">
+        <label for="counter">Count </label>
+        <input type="text" id="counter" value="0" readonly>
+      </div>
+    </div>
+
+    <div class="form-item-group">
+      <div class="form-item">
+        <label for="zero">Zero </label>
+        <input type="text" id="zero" value="0" readonly>
+      </div>
+      <div class="form-item">
+        <label for="one">One </label>
+        <input type="text" id="one" value="0" readonly>
+      </div>
+    </div>
+
+    <div class="form-item">
+      <input type="button" id="startBtn" value="Start">
+    </div>
+
+  </form>
+
+  <div id="results">
+    <div class="table">
+      <table id="statTable">
+        <thead>
+          <tr>
+            <th onClick="app.sortStats(0)">Count</th>
+            <th onClick="app.sortStats(0)">Zero</th>
+            <th onClick="app.sortStats(0)">One</th>
+          </tr>
+        </thead>
+        <tbody id="stat">
+        </tbody>
+      </table>
+    </div>
+    <div class="form-item">
+      <input type="button" id="clear-btn" value="Clear Cache">
+    </div>
+  </div>
+
+</div>
+
+
+<script src="app.js"></script>
+<script>
+
+  app.init();
+
+</script>
+
+</body>
+</html>
